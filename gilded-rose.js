@@ -32,7 +32,7 @@ export class ConcertTickets extends Item {
     this.quality += 2;
   }
   this.sellIn -= 1;
-  
+
   if (this.sellIn < 0){
     this.quality = 0;
   }
@@ -51,6 +51,16 @@ export class AgedBrie extends Item {
     this.sellIn -= 1;
   }
 }
+
+export class Conjured extends Item {
+  updateQuality(){
+    if(this.sellIn > 0){
+      this.quality -= 2;
+    }
+    this.sellIn -= 1;
+  }
+}
+
 
 export const updateQuality = () => {
   for (let item of items){

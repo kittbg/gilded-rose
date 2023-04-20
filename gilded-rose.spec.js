@@ -93,15 +93,15 @@ describe("updateQuality", () => {
       expect(testItem.quality).toBe(0);
     });
 
-    // it("Conjured items degrade in quality twice as fast as normal items", () => {
-    //   const testItem = new Item("Conjured", 10, 10) 
-    //   items.push(testItem);
+    it("Conjured items degrade in quality twice as fast as normal items", () => {
+      const testItem = new Conjured("Conjured", 10, 10) 
+      items.push(testItem);
   
-    //   updateQuality();
+      updateQuality();
   
-    //   expect(testItem.sellIn).toBe(9);
-    //   expect(testItem.quality).toBe(8);
-    // });
+      expect(testItem.sellIn).toBe(9);
+      expect(testItem.quality).toBe(8);
+    });
   });
 
 
